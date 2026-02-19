@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GENTEL Élet Biztosító Zrt. - Belső Portál</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <header>
+            <h1>GENTEL Élet Biztosító Zrt.</h1>
+            <p>Belső Informatikai Rendszer</p>
+        </header>
+
+        <hr>
+
+        <div id="login-section">
+            <h3>Dolgozói Belépés</h3>
+            <input type="text" id="user" placeholder="Felhasználónév"><br>
+            <input type="password" id="pass" placeholder="Jelszó"><br>
+            <button onclick="login()">Bejelentkezés</button>
+        </div>
+
+        <div id="intranet-section" style="display:none;">
+            <h3>Belső Portál</h3>
+            <div class="card-grid">
+                <div class="card">
+                    <a href="internal/ugyfelek.html">Ügyféladatbázis</a>
+                </div>
+                <div class="card">
+                    <a href="internal/kotvenyek.html">Kötvénykezelő</a>
+                </div>
+                <div class="card">
+                    <a href="internal/karrendezes.html">Kárrendezési modul</a>
+                </div>
+            </div>
+            <button onclick="logout()">Kijelentkezés</button>
+        </div>
+
+        <hr>
+
+        <div class="quick-links">
+            <a href='helloworld.html'>Rólunk</a>
+            <a href='copyrights.html'>Jogaink</a>
+            <a href='image.html'>FTP Szerver</a>
+        </div>
+    </div>
+
+    <footer style="margin-top: 2rem; font-size: 0.8rem; color: #888;">
+        &copy; 2026 GENTEL Élet Biztosító Zrt. Minden jog fenntartva.
+    </footer>
+
+    <script>
+        function login() {
+            document.getElementById('login-section').style.display = 'none';
+            document.getElementById('intranet-section').style.display = 'block';
+        }
+        function logout() {
+            document.getElementById('login-section').style.display = 'block';
+            document.getElementById('intranet-section').style.display = 'none';
+        }
+    </script>
+
+</body>
+
+</html>
