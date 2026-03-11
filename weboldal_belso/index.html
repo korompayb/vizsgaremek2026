@@ -20,7 +20,7 @@
 
         <div id="login-section">
             <h3>Dolgozói Belépés</h3>
-            <input type="text" id="user" placeholder="Felhasználónév"><br>
+            <input type="email" id="email" placeholder="Email Cím"><br>
             <input type="password" id="pass" placeholder="Jelszó"><br>
             <button onclick="login()">Bejelentkezés</button>
         </div>
@@ -54,16 +54,49 @@
         &copy; 2026 GENTEL Élet Biztosító Zrt. Minden jog fenntartva.
     </footer>
 
+
     <script>
-        function login() {
-            document.getElementById('login-section').style.display = 'none';
-            document.getElementById('intranet-section').style.display = 'block';
+        async function login() {
+            const userVal = document.getElementById('email').value;
+            const passVal = document.getElementById('pass').value;
+
+            try {
+                const response = await fetch('./dolgozok.json');
+                const data = await response.json();
+
+                // Ensure dolgozok is an array (handles case where JSON is { "Munkasok": [...] } or an object)
+                const dolgozok = Array.isArray(data) ? data : (data.Munkasok || Object.values(data));
+
+                const dolgozo = dolgozok.find(d => d.email === userVal && String(d.pass) === passVal);
+
+                if (dolgozo) {
+                    document.getElementById('login-section').style.display = 'none';
+                    document.getElementById('intranet-section').style.display = 'block';
+                    sessionStorage.setItem('user', JSON.stringify(dolgozo));
+                } else {
+                    alert('Hibás felhasználónév vagy jelszó!');
+                }
+            } catch (error) {
+                console.error('Hiba az adatok betöltésekor:', error);
+            }
         }
+
         function logout() {
+            sessionStorage.removeItem('user');
             document.getElementById('login-section').style.display = 'block';
             document.getElementById('intranet-section').style.display = 'none';
+            document.getElementById('user').value = '';
+            document.getElementById('pass').value = '';
         }
+
+        window.onload = () => {
+            if (sessionStorage.getItem('user')) {
+                document.getElementById('login-section').style.display = 'none';
+                document.getElementById('intranet-section').style.display = 'block';
+            }
+        };
     </script>
+
 
 </body>
 

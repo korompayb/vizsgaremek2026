@@ -1,0 +1,60 @@
+{
+    "Munkasok": [
+        {
+            "ID": "1",
+            "Name": "Michael Scott",
+            "email": "manager@email.com",
+            "Description": "Regionalis Igazgato",
+            "pass" : "1234",
+            "accessID" : 0
+        },
+        {
+            "ID": "2",
+            "Name": "Jim Halpert",
+            "email": "default@email.com",
+            "Description": "Ertekesito Manager",
+            "pass" : 1234,
+            "accessID" : 0
+        },
+        {
+            "ID": "3",
+            "Name": "Dwight Schrute",
+            "email": "default@email.com",
+            "Description": "Marketinges",
+            "pass" : 1234,
+            "accessID" : 0
+        },
+        {
+            "ID": "4",
+            "Name": "Pamela Beesly",
+            "email": "default@email.com",
+            "Description": "Titkarno",
+            "pass" : 1234,
+            "accessID" : 0
+        },
+        {
+            "ID": "5",
+            "Name": "Kevin Melone",
+            "email": "default@email.com",
+            "Description": "Konyvelo",
+            "pass" : 1234,
+            "accessID" : 0
+        },
+        {
+            "ID": "6",
+            "Name": "Holly Flax",
+            "email": "default@email.com",
+            "Description": "HR",
+            "pass" : 1234,
+            "accessID" : 0
+        },
+        {
+            "ID": "7",
+            "Name": "Istvan Kallo",
+            "email": "default@email.com",
+            "Description": "Magyar Teruleti Igazgato",
+            "pass" : 1234,
+            "accessID" : 0
+        }
+    ]
+}
