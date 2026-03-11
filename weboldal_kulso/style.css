@@ -1,3 +1,9 @@
+:root {
+  --grad1: radial-gradient(farthest-corner circle at top left, #a5c5ca 0%, 26%, #aec7cc 0%, 46%, #47c0cf 0%, 60%, #0191c1 0%, 82%, #004fff 0%);
+  /*--grad2: linear-gradient(#afc8ff 0%, 10%, #99bdff 0%, 26%, #7ba5ff 0%, 46%, #4f95ff 0%, 72%, #0077ff 0%);
+*/
+}
+
 body {
     margin: 1px;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
@@ -5,7 +11,6 @@ body {
 }
 
 .container {
-    width: 80%;
     height: 100%;
     justify-content: center;
     align-items: center;
@@ -14,6 +19,9 @@ body {
 
 .header {
     position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     backdrop-filter: blur(10px);
     text-align: center;
     background-color: #eeeeee4c;
@@ -22,11 +30,21 @@ body {
     padding-bottom: 10px;
 }
 
+.header img {
+    /*add to the left of the navbar */
+    display: block;
+    justify-content: flex-start;
+    width:15vw;
+    margin-left:10px;
+
+}
+
 
 .header a {
     color: black;
     text-decoration: none;
     vertical-align: middle;
+    margin-right: 10px;
 }
 
 .header .active {
@@ -67,4 +85,56 @@ main {
     width: fit-content;
     padding-left: 30px;
     padding-right: 30px;
+}
+.advert-section {
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+
+}
+
+.advert-section h2 {
+    text-align: center;
+}
+
+.advert-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+}
+
+.advert {
+    width: 30%;
+
+}
+
+.advert h3 , .advert p {
+    text-align: center;
+
+}
+
+.advert-icon {
+    display: flex;
+    margin-right: auto !important;
+    margin-left: auto !important;
+    width: 40px;
+}
+
+.about {
+    padding: 5vh 5vh;
+    background: var(--grad1);
+    color: #ffffff;
+}
+
+.footer {
+    text-align: center;
+    background-color: #a5c5ca;
+    color: white;
+    padding: 5vh;
+}
+
+.mailto {
+    text-decoration: underline;
+    color: white;
 }
