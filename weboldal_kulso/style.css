@@ -1,5 +1,5 @@
 :root {
-  --grad1: radial-gradient(farthest-corner circle at top left, #a5c5ca 0%, 26%, #aec7cc 0%, 46%, #47c0cf 0%, 60%, #0191c1 0%, 82%, #004fff 0%);
+  --grad1: radial-gradient(farthest-corner circle at top left, #91c3cb 0%, 26%, #83bfcb 0%, 46%, #47c0cf 0%, 60%, #0191c1 0%, 82%, #004fff 0%);
   /*--grad2: linear-gradient(#afc8ff 0%, 10%, #99bdff 0%, 26%, #7ba5ff 0%, 46%, #4f95ff 0%, 72%, #0077ff 0%);
 */
 }
